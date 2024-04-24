@@ -5,11 +5,11 @@ use std::{
 };
 
 pub struct Config {
-    pub filename: String,
-    pub get_num_of_bytes: bool,
-    pub get_num_of_lines: bool,
-    pub get_num_of_words: bool,
-    pub get_num_of_chars: bool,
+    filename: String,
+    get_num_of_bytes: bool,
+    get_num_of_lines: bool,
+    get_num_of_words: bool,
+    get_num_of_chars: bool,
 }
 
 impl Config {
@@ -55,11 +55,11 @@ impl Config {
         if self.get_num_of_words {
             results.push(get_num_of_words(&contents));
         }
-        if self.get_num_of_bytes {
-            results.push(get_num_of_bytes(&contents));
-        }
         if self.get_num_of_chars {
             results.push(get_num_of_chars(&contents));
+        }
+        if self.get_num_of_bytes {
+            results.push(get_num_of_bytes(&contents));
         }
     }
 }
